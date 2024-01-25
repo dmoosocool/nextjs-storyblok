@@ -1,10 +1,15 @@
-import Image from "next/image";
+import { getHomePageData } from "@/modules/storyblok/api";
+import { draftMode } from "next/headers";
 
-export default function Home() {
+export default async function Home() {
+  const data = await getHomePageData();
   return (
     <div>
-      <h1>Home</h1>
-      <p> NextJS + Storyblok</p>
+      <div>DraftMode: {draftMode().isEnabled ? "true" : "false"}</div>
+      {data?.story.content.title && <h1>{data.story.content.title}</h1>}
+      {data?.story.content.description && (
+        <p>{data.story.content.description}</p>
+      )}
     </div>
   );
 }
