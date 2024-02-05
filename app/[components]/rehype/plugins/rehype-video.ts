@@ -17,9 +17,9 @@ export const rehypeVideo: Plugin<Array<{ cache: RehypeVideoCache }>, Root> =
     });
   };
 
-function processVideoNode(node, cache, index, parent) {
+function processVideoNode(node: any, cache: any, index: any, parent: any) {
   if (node.children) {
-    node.children.forEach((child) => {
+    node.children.forEach((child: any) => {
       if (child.tagName === "source" && child.properties) {
         const videoUrl = getUrl(child.properties.src);
         if (videoUrl) {
