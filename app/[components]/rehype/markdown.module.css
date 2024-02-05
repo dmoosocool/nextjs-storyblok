@@ -1,0 +1,162 @@
+.container {
+  @apply mx-auto flex flex-col gap-y-3 text-[16px] font-normal leading-[1.8] tracking-normal lg:max-w-[998px] lg:text-[18px];
+}
+
+/* Title */
+.container h1 {
+  @apply text-[26px] font-light tracking-normal lg:text-[40px];
+}
+
+.container h2 {
+  @apply text-[20px] font-medium tracking-normal lg:text-[32px];
+}
+
+.container h3 {
+  @apply text-[18px] font-medium tracking-normal lg:text-[24px];
+}
+
+.container h4 {
+  @apply text-[16px] font-semibold tracking-normal lg:text-[18px];
+}
+
+.container h5 {
+  @apply text-[16px] font-medium uppercase tracking-normal lg:text-[18px];
+}
+
+.container h6 {
+  @apply text-[16px] font-medium tracking-normal text-[#707070] lg:text-[18px];
+}
+
+.container h1,
+.container h2,
+.container h3,
+.container h4,
+.container h5,
+.container h6 {
+  @apply mt-8 leading-[1.2] lg:leading-[1.25];
+}
+
+.container strong {
+  @apply text-[16px] font-semibold lg:text-[18px];
+}
+
+.container em {
+  @apply text-[16px] font-light italic lg:text-[18px];
+}
+
+.container > ul,
+.container > ol {
+  @apply my-5 ml-5;
+}
+
+/* Hr */
+.container hr {
+  @apply my-8 h-[1px] border-none bg-current opacity-50;
+}
+
+/* Table */
+.container table thead th:empty {
+  @apply py-4;
+}
+
+.container table thead th {
+  @apply text-left;
+}
+
+.container table thead tr th {
+  @apply border border-index-mid-grey/20;
+}
+
+.container table tbody tr td {
+  @apply border border-index-mid-grey/20;
+}
+
+.container table th,
+.container table td {
+  @apply p-2;
+}
+
+.container table tbody tr:nth-child(2n-1) {
+  @apply bg-white/50;
+}
+
+@screen lg {
+  .container table th,
+  .container table td {
+    @apply px-5;
+  }
+}
+
+/* List */
+.container ul {
+  @apply my-2;
+  list-style: disc;
+}
+
+.container ul ul {
+  list-style: circle;
+}
+
+.container ul ul ul {
+  list-style: square;
+}
+
+.container ol {
+  @apply my-2;
+  list-style: decimal;
+}
+
+.container ol ol {
+  list-style: lower-alpha;
+}
+
+.container ol ol ol {
+  list-style: lower-roman;
+}
+
+.container p {
+  @apply my-2;
+}
+
+.container li > p + img {
+  @apply my-5 block;
+}
+
+.container li {
+  @apply my-2;
+}
+
+.container li > ul,
+.container li > ol {
+  @apply ml-5;
+}
+
+/* Inline Code */
+.container code {
+  @apply w-full overflow-x-auto rounded-[0.2rem] bg-[#f2f7fa] px-[0.2rem] py-[0.3rem] text-[16px] font-normal text-[#1477fb];
+  line-break: anywhere;
+}
+
+.container pre:has(code) {
+  @apply w-full overflow-x-auto rounded-[0.2rem] bg-[#f2f7fa] px-[0.2rem] py-[0.3rem] text-[16px] font-normal text-[#1477fb];
+}
+
+/* Image */
+.container img,
+.container video {
+  @apply mx-auto my-12 block w-full rounded-xl;
+}
+
+.container > h1 + img {
+  @apply mt-0;
+}
+
+/* Link */
+
+.container a {
+  @apply underline;
+}
+
+.container a:hover {
+  @apply text-rss3-blue underline;
+}
